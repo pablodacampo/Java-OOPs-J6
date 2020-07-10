@@ -3,7 +3,7 @@ package fr.diginamic.recensement;
 import java.util.Scanner;
 
 import fr.diginamic.recensement.entites.Recensement;
-import fr.diginamic.recensement.exceptions.FunctionalException;
+import fr.diginamic.recensement.exceptions.RecensementException;
 import fr.diginamic.recensement.services.RechercheDepartementsPlusPeuplees;
 import fr.diginamic.recensement.services.RecherchePopulationBorneService;
 import fr.diginamic.recensement.services.RecherchePopulationDepartementService;
@@ -69,49 +69,29 @@ public class Application {
 				RecherchePopulationBorneService recherchePopBorne = new RecherchePopulationBorneService();
 				try {
 					recherchePopBorne.traiter(recensement, scanner);
-				} catch (FunctionalException e) {
+				} catch (RecensementException e) {
 					System.err.println(e.getMessage());
 				}
 				break;
 			case 5:
 				RechercheVillesPlusPeupleesDepartement rechercheVillesPlusPeupleesDepartement = new RechercheVillesPlusPeupleesDepartement();
-				try {
-					rechercheVillesPlusPeupleesDepartement.traiter(recensement, scanner);
-				} catch (FunctionalException e) {
-					System.err.println(e.getMessage());
-				}
+				rechercheVillesPlusPeupleesDepartement.traiter(recensement, scanner);
 				break;
 			case 6:
 				RechercheVillesPlusPeupleesRegion rechercheVillesPlusPeupleesRegion = new RechercheVillesPlusPeupleesRegion();
-				try {
-					rechercheVillesPlusPeupleesRegion.traiter(recensement, scanner);
-				} catch (FunctionalException e) {
-					System.err.println(e.getMessage());
-				}
+				rechercheVillesPlusPeupleesRegion.traiter(recensement, scanner);
 				break;
 			case 7:
 				RechercheDepartementsPlusPeuplees rechercherDepartementsPlusPeuplees = new RechercheDepartementsPlusPeuplees();
-				try {
-					rechercherDepartementsPlusPeuplees.traiter(recensement, scanner);
-				} catch (FunctionalException e) {
-					System.err.println(e.getMessage());
-				}
+				rechercherDepartementsPlusPeuplees.traiter(recensement, scanner);
 				break;
 			case 8:
 				RechercheRegionsPlusPeuplees rechercheRegionsPlusPeuplees = new RechercheRegionsPlusPeuplees();
-				try {
-					rechercheRegionsPlusPeuplees.traiter(recensement, scanner);
-				} catch (FunctionalException e) {
-					System.err.println(e.getMessage());
-				}
+				rechercheRegionsPlusPeuplees.traiter(recensement, scanner);
 				break;
 			case 9:
 				RechercheVillesPlusPeupleesFrance rechercheVillesPlusPeupleesFrance = new RechercheVillesPlusPeupleesFrance();
-				try {
-					rechercheVillesPlusPeupleesFrance.traiter(recensement, scanner);
-				} catch (FunctionalException e) {
-					System.err.println(e.getMessage());
-				}
+				rechercheVillesPlusPeupleesFrance.traiter(recensement, scanner);
 				break;
 			}
 

@@ -1,3 +1,4 @@
+  
 package fr.diginamic.recensement.services;
 
 import java.util.ArrayList;
@@ -7,12 +8,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 
-import org.apache.commons.lang3.math.NumberUtils;
-
 import fr.diginamic.recensement.entites.Departement;
 import fr.diginamic.recensement.entites.Recensement;
 import fr.diginamic.recensement.entites.Ville;
-import fr.diginamic.recensement.exceptions.FunctionalException;
 import fr.diginamic.recensement.services.comparators.EnsemblePopComparateur;
 
 /**
@@ -24,13 +22,10 @@ import fr.diginamic.recensement.services.comparators.EnsemblePopComparateur;
 public class RechercheDepartementsPlusPeuplees extends MenuService {
 
 	@Override
-	public void traiter(Recensement recensement, Scanner scanner) throws FunctionalException {
+	public void traiter(Recensement recensement, Scanner scanner) {
 
 		System.out.println("Veuillez saisir un nombre de départements:");
 		String nbDeptsStr = scanner.nextLine();
-		if (!NumberUtils.isDigits(nbDeptsStr)) {
-			throw new FunctionalException("Veuillez saisir un nombre entier de départements.");
-		}
 		int nbDepts = Integer.parseInt(nbDeptsStr);
 
 		List<Ville> villes = recensement.getVilles();
