@@ -5,11 +5,19 @@
 	<groupId>fr.diginamic</groupId>
 	<artifactId>java-poo-j6</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+<<<<<<< HEAD
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 
+=======
+	
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+	
+>>>>>>> ef9714bdf3e2f69c51883f19668fa95b5877c7ba
 	<build>
 		<plugins>
 			<plugin>
@@ -17,8 +25,13 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.5.1</version>
 				<configuration>
+<<<<<<< HEAD
 					<source>14</source>
 					<target>14</target>
+=======
+					<source>11</source>
+					<target>11</target>
+>>>>>>> ef9714bdf3e2f69c51883f19668fa95b5877c7ba
 				</configuration>
 			</plugin>
 		</plugins>
